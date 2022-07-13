@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FinishLine : MonoBehaviour
+public class CrashDetector : MonoBehaviour
 {
-    [SerializeField] Pa FinishLine;
-
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "Player")
+        if (other.tag == "Ground")
         {
-            Invoke("reloadScene",0.75f);
+            Invoke("reloadScene", 0.25f);
         }
     }
 
