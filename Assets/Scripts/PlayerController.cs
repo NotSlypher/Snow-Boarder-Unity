@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         rotatePlayer();
+        Debug.Log(torqueAmount);
         respondToBoast();
     }
 
